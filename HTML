@@ -1,0 +1,14 @@
+def minimum_weighings(target_weight_grams):
+    current_weight = 1  
+    weighings = 0  
+
+    while current_weight < target_weight_grams:
+        current_weight *= 2 
+        weighings += 1  
+
+    return weighings
+
+# Целевая масса - 1000 г
+target_weight = 1000
+result = minimum_weighings(target_weight)
+print(f"Минимальное число взвешиваний для отмеривания 1 кг: {result}")
